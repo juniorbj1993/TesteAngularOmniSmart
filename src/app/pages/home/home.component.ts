@@ -10,10 +10,11 @@ import { UserService } from 'src/app/shared/services/api.service';
 })
 export class HomeComponent implements OnInit {
   ELEMENT_DATA: user[] = [
-    {id: 1, name: 'Hydrogen', phone: "(88) 9 8111-7229", email: 'juniorbj1993@gmail.com'},
+    {id: 1, name: 'Hydrogen', phone: "(88) 6 6161-7669", email: 'jubileu@gmail.com'},
+    {id: 1, name: 'Hydrogen2', phone: "(88) 9 8444-4449", email: 'jubileu2@gmail.com'},
   ];
   displayedColumns: string[] = ['id', 'name', 'phone', 'email','action'];
-  dataSource:Array<user> | undefined;
+  dataSource:Array<user> = [];
   title = 'Teste Angular OmniSmart';
   
   constructor(
@@ -29,11 +30,12 @@ export class HomeComponent implements OnInit {
   }
 
   getUsers(){
+    this.dataSource = this.ELEMENT_DATA;
+    //como não tem retorno adcionei data mocked
     this.userService.getAllUsers().subscribe((data)=>{
       this.dataSource = data;
       console.log(data);
     },error=>{
-      this.dataSource = this.ELEMENT_DATA;
       console.log(error);
     })
   }

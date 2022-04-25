@@ -1,16 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 
 import { UserService } from './api.service';
 
 describe('api teste', () => {
   let service: UserService;
-
+  let http: HttpClient;
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(UserService);
+    service = new UserService(http);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+
+  it('testando api', () => {
+    let resultado = service.testApi();
+    expect(service).toBeDefined();
+    expect(resultado).toEqual("passou")
   });
 });

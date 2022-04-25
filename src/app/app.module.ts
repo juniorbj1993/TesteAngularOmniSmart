@@ -11,9 +11,9 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
-import { SharedModule } from './shared/services.module';
 import { HttpClientModule } from '@angular/common/http';
-import { UserService } from './shared/services/api.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +30,9 @@ import { UserService } from './shared/services/api.service';
     MatCardModule,
     MatTableModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

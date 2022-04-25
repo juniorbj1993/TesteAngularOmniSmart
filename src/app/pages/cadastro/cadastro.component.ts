@@ -14,7 +14,7 @@ export class CadastroComponent implements OnInit {
   public form!: FormGroup;
   action:string = "CADASTRAR";
   
-  userData: user = {id: 1, name: 'Hydrogen', phone: "(88) 9 8111-7229", email: 'juniorbj1993@gmail.com'};
+  userData: user = {};
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -32,15 +32,18 @@ export class CadastroComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.createForm()
+  
     if(this.activatedRoute.snapshot.params.id){
       this.idUser = this.activatedRoute.snapshot.params.id;
       this.action = "ALTERAR"
+      //data mocked devido a requisição
+      this.userData =  {id: 1, name: 'Hydrogen', phone: "(88) 6 6161-7669", email: 'jubileu@gmail.com'},
       this.getUser(this.activatedRoute.snapshot.params.id);
     }else{
       this.idUser = undefined;
       this.action = "CADASTRAR"
     }
+    this.createForm()
     
   }
 

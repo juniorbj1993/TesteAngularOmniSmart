@@ -31,4 +31,7 @@ export class UserService {
     public updateUser(id:string,data:user): Observable<any> {
         return this.http.put(this.env.api + '/users/'+id, data,{observe: 'response',headers:this.headers});
     }
+    public testApi(){
+        return "passou";
+    }
 }
