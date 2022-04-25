@@ -1,0 +1,39 @@
+<form class="example-form" [formGroup]="form">
+    <mat-card class="card-cadastro">
+        <div class="Row">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label class="title">CADASTRO</mat-label>
+                <input matInput class="nome-empresa" disabled value="OmniSmart">
+              </mat-form-field>
+              <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Nome</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+              </div>
+               <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+               </div>
+               <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Telefone</mat-label>
+                    <input matInput formControlName="phone">
+                </mat-form-field>
+               </div>
+               <div class="col">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Senha</mat-label>
+                    <input matInput formControlName="password">
+                </mat-form-field>
+               </div>
+                     
+               
+               <button class="button-cadastro" (click)="realizarAcao()"  mat-raised-button color="primary">{{action}}</button>
+        </div>
+    </mat-card>
+    
+   
+</form>

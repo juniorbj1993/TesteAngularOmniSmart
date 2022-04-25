@@ -1,0 +1,27 @@
+.example-form{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+}
+
+.example-full-width {
+    width: 100%;
+}
+.card-cadastro{
+    width: 50%;
+}
+.title{
+    font-size: 50px;
+   
+    color: #1976d2;
+}
+.nome-empresa{
+    margin-top: 5%;
+    color: rgb(175, 45, 45);
+    font-size: 20px;
+}
+.arte{
+    height: 50vh;
+}
